@@ -80,8 +80,7 @@ function colorlight_proto.dissector(buffer, pinfo, tree)
 
     else
         -- Handle other frame types if needed
-        pinfo.cols.info = string.format("ColorLight Frame EtherType: 0x%04X", ethertype)
-        subtree:add(buffer(data_offset))
+        pinfo.cols.info = string.format("ColorLight Keep-Alive Frame? (Not sure)", ethertype)
     end
 end
 
